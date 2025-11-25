@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Carlos Capecchi | Psicología y Sexualidad</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Hind+Siliguri:wght@300;400;500;600;700&family=Hind+Vadodara:wght@300;400;500;600;700&family=Titan+One&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+
+    <body>
+        <!-- SECCION ENCABEZADO -->
+        <section class="encabezado">
+            <!-- VIDEO DE FONDO -->
+            <video autoplay muted loop playsinline class="video-fondo">
+                <source src="./imagenes/fondo-animado-final.mp4" type="video/mp4">
+            </video>
+            <!-- MENU -->
+            <div class="contenedor-menu">
+                <a class="logo-menu" href="./index.html" title="Volver a inicio">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100" height="100">
+                        <path d="m 542.05467,719.3905 c -11.41628,1.15005 -46.61597,1.1674 -56.75734,0.034 -24.21926,-2.69855 -58.0577,-9.95394 -75.91171,-16.25914 -26.05298,-9.20321 -60.64502,-27.78948 -81.85507,-43.95965 -10.52783,-8.03905 -27.00887,-23.297 -39.97255,-37.01856 -26.57199,-28.12168 -49.17372,-66.27203 -64.87149,-109.55209 -8.32959,-22.95147 -11.36338,-36.81253 -15.05234,-68.70378 -1.92759,-16.72678 -1.00177,-49.27742 1.97523,-68.97999 5.01188,-33.23701 8.16759,-44.43649 20.4906,-72.73697 9.19925,-21.11091 14.18584,-30.32618 24.73106,-45.7089 17.45189,-25.45283 34.73957,-44.72727 56.68548,-63.23043 22.72227,-19.16301 42.13947,-31.54887 69.0903,-44.08573 26.16788,-12.16712 67.0364,-23.58095 94.37741,-26.34184 16.01822,-1.61961 65.7804,-0.63548 80.89734,1.5934 36.8706,5.45507 83.2715,23.80652 112.49327,44.49238 38.28737,27.10556 74.18417,79.02184 89.55884,129.51829 4.57413,15.06141 4.35863,18.03884 -1.76033,23.42888 -3.3901,2.98569 -4.97616,3.68492 -8.30568,3.64116 -5.02021,-0.066 -5.21413,-0.30857 -15.93966,-20.14125 -13.99679,-25.8862 -24.5978,-40.19677 -43.31083,-58.49429 -23.07633,-22.56526 -40.4475,-33.2445 -80.78389,-49.68607 -25.50821,-10.39616 -37.68112,-12.45633 -76.59829,-12.95788 -31.60467,-0.40543 -36.95393,0.0943 -61.04437,5.74817 -24.10094,5.66373 -52.74441,17.53828 -68.04153,28.22815 -15.99852,11.17068 -38.3309,33.81912 -49.35416,50.05564 -13.00141,19.14078 -24.64636,44.78994 -30.05209,66.16074 -1.24778,4.95403 -2.01177,14.14478 -2.62596,31.66822 -1.38033,39.50527 0.26796,49.06776 14.87684,86.00296 9.38809,23.71544 37.17778,56.2735 64.42738,75.4633 11.53289,8.13229 32.4002,18.80748 45.55753,23.3208 36.15691,12.39629 84.92388,11.7472 121.13932,-1.61796 17.23197,-6.35406 33.38251,-16.46266 47.94928,-29.99239 11.85706,-11.00511 24.55499,-25.99951 27.47127,-32.40173 3.04484,-6.71056 11.83004,-22.36645 17.48572,-31.18287 8.98107,-13.98317 24.9167,-25.89475 43.66855,-32.64888 6.66066,-2.40266 7.88617,-2.50656 26.17183,-2.20621 19.14656,0.31168 19.1983,0.32241 26.63575,3.5404 9.35592,4.06331 13.71608,6.99087 21.03966,14.13776 10.31455,10.05643 16.08192,24.31345 17.92503,44.30941 1.58869,17.25237 -2.66063,42.19868 -10.67912,62.66506 -5.6249,14.36731 -17.69838,37.89065 -25.46717,49.61956 -14.88108,22.44634 -40.71977,50.60918 -61.14945,66.62205 -19.27676,15.11795 -45.29671,29.44719 -71.8108,39.53959 -22.37484,8.51664 -52.17153,14.99557 -83.30386,18.11667 z M 512.87138,459.79451 c -4.24085,0.62432 -11.82264,0.49465 -15.61996,-0.26526 -4.98737,-0.98564 -5.4734,-3.47224 -5.7875,-29.2986 l -0.29561,-24.07596 -2.79016,-0.0367 c -5.59069,-0.0735 -19.36327,-4.34488 -28.54746,-8.84598 C 446.7091,390.829 437.89246,382.04237 430.8514,368.39863 l -5.14927,-9.97853 -0.11883,-38.31488 c -0.007,-2.61031 -0.0165,-5.06064 -0.0277,-7.36099 -0.10259,-25.34354 -0.13439,-32.39457 3.0854,-34.26242 1.23366,-0.72384 2.95507,-0.67121 5.34032,-0.60986 0.55998,0.0173 1.16144,0.0353 1.79415,0.0436 9.42847,0.12394 12.26916,1.05135 13.60465,4.41919 0.69282,1.74927 1.05672,15.1052 0.9963,36.27623 l -0.11875,33.50134 4.82551,8.56416 c 7.82594,13.91406 12.86855,17.80068 29.60827,22.85113 0.49591,0.15652 0.96082,0.30264 1.40499,0.4485 1.65274,0.54177 2.90267,0.94823 3.85128,0.60067 3.17934,-1.15831 3.08625,-10.65035 3.89153,-51.39329 0.53422,-27.22533 1.33464,-50.23681 1.772,-51.15113 1.10909,-2.29562 3.13972,-2.87898 11.55892,-3.31837 10.32929,-0.53428 12.23266,0.67084 13.09661,8.34286 0.37178,3.28516 0.81566,25.55293 0.97826,49.48714 0.21818,30.75551 0.66427,44.17254 1.5354,45.77412 1.69143,3.12251 4.57823,2.91043 13.29171,-0.97538 9.06838,-4.05116 17.07974,-11.3465 22.91058,-20.86068 l 4.2194,-6.88513 1.00318,-34.4898 c 0.55026,-18.97442 1.38644,-35.23483 1.86516,-36.13861 1.02138,-1.93674 3.02023,-2.47052 12.14921,-3.2406 5.85763,-0.50306 7.08957,-0.30684 9.31724,1.48259 l 2.5664,2.06391 -0.5041,32.82621 c -0.56864,36.94572 -1.3679,42.50569 -7.83621,54.74173 -3.95774,7.49863 -15.0722,18.83354 -23.73265,24.21017 -6.76729,4.20141 -18.75556,8.61423 -28.53211,10.50589 l -8.45571,1.63902 -0.90575,23.92016 c -0.56006,14.98393 -1.35164,24.69436 -2.1158,26.00443 -0.76442,1.33007 -2.66546,2.31518 -5.14958,2.67255 z" fill="currentColor"/>
+                    </svg>
+                </a>
+                
+                <nav>
+                    <ul class="lista-menu">
+                        <li class="elemento-menu"><a class="link-menu" href="./acerca-de.html">Acerca de</a></li>
+                        <li class="elemento-menu"><a class="link-menu" href="./servicios.html">Servicios</a></li>
+                        <li class="elemento-menu"><a class="link-menu" href="./blog.html">Blog</a></li>
+                        <li class="elemento-menu"><a class="link-menu" href="./contacto.html">Contáctame</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- TITULAR -->
+            <div class="titular-texto">
+                <h1>Carlos Capecchi</h1>
+                <h2>Psicología y Sexualidad</h2>
+                <a href="./acerca-de.html">Saber más</a>
+            </div>
+        </section>
+
+        <!-- SECCION CONTACTO + FRASE -->
+        <section class="container">
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="left-container">
+                <h2>📆Agenda tu cita</h2>
+                <div class="formulario">
+                    <form id="form" action="https://formspree.io/f/mzzkrrdy" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                        <label for="correo">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        <label for="mensaje">Mensaje o pregunta:</label>
+                        <input id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required>
+                        <button type="submit">Enviar</button>
+                    </form> 
+                </div>
+            </div>
+
+            <!-- FRASE -->
+            <div class="right-container">
+                <hr />
+                <h2>"La salud mental y sexual son parte esencial de una vida plena, porque influyen en cómo te sientes 
+                    contigo y cómo te conectas con otros. Cuidarlas con atención y cariño te permite vivir con mayor bienestar, 
+                    autenticidad y libertad."</h2>
+                <hr />
+            </div>
+        </section>
+
+        <!-- SECCION SERVICIOS -->
+        <section class="servicios">
+            <h2>💡Servicios que puedo ofrecerte</h2>
+            <p class="serv-subtitle">Explora las áreas en las que puedo brindarte acompañamiento especializado</p>
+                <div class="serv-container">
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/therapy.jpg">
+                            <h3>✨PSICOTERAPIA INDIVIDUAL</h3>
+                            <p>Un espacio para comprender lo que sientes, ordenar tu mundo interno y reencontrarte contigo 
+                                mismo/a. Avanzamos a tu ritmo, con respeto y acompañamiento genuino. <span style="font-weight: bold; 
+                                color: #2d4c53;">Descúbre cómo este proceso puede ayudarte a sentirte mejor.</span></p>
+                        </a>
+                    </div>
+
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/couple.jpg">
+                            <h3>💞TERAPIA DE PAREJA</h3>
+                            <p>Un lugar para escuchar y ser escuchados, reconstruir confianza y fortalecer el vínculo. Aquí 
+                                pueden explorar nuevas formas de comunicarse y mirarse con más claridad. <span style="font-weight: bold;
+                                color: #2d4c53">Permítanse el acompañamiento hacia una relación más consciente.</span></p>
+                        </a>
+                    </div>
+
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/sex.jpg">
+                            <h3>🔥TERAPIA SEXUAL</h3>
+                            <p>Un acompañamiento profesional y seguro para comprender tus experiencias sexuales, superar 
+                                bloqueos y recuperar el bienestar erótico. Hablamos sin juicios y con total confidencialidad. 
+                                <span style="font-weight: bold; color: #2d4c53;">Explora tu sexualidad desde la libertad y el bienestar.</p>
+                        </a>
+                    </div>
+
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/assessment.jpg">
+                            <h3>🧠EVALUACIÓN PSICOLÓGICA</h3>
+                            <p>Un proceso claro y respetuoso para comprender tus fortalezas, dificultades y necesidades 
+                                actuales. Te ofrezco resultados útiles, explicados con lenguaje claro y orientados a 
+                                ayudarte. <span style="font-weight: bold; color: #2d4c53;">Conoce más sobre tu perfil psicológico 
+                                con confianza.</span></p>
+                        </a>
+                    </div>
+
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/kids.avif">
+                            <h3>🌱PSICODIAGNÓSTICO INFANTIL</h3>
+                            <p>Una evaluación integral y sensible que busca comprender la historia, el contexto y las 
+                                necesidades emocionales de niños, niñas y adolescentes. Acompaño a las familias con orientación 
+                                clara y cercana. <span style="color: #2d4c53; font-weight: bold;">Da el primer paso hacia un mejor entendimiento 
+                                de tu hijo o hija.</span></p>
+                        </a>
+                    </div>
+
+                    <div class="single-serv">
+                        <a href="./servicios.html">
+                            <img src="./imagenes/coaching.avif">
+                            <h3>🏢ASESORÍA ORGANIZACIONAL</h3>
+                            <p>Acompañamiento profesional para fortalecer equipos, gestionar el clima laboral y desarrollar 
+                                habilidades socioemocionales dentro de tu organización. Trabajamos desde la confianza y la 
+                                colaboración. <span style="color: #2d4c53; font-weight: bold;">Descubre cómo impulsar el bienestar en tu 
+                                equipo.</span></p>
+                        </a>
+                    </div>
+                </div>
+         </section>
+
+        <!-- MARQUESINA -->
+        <div class="letrero">
+            <div class="scroll-text">
+                <span>PREGUNTA POR LOS PAQUETES PROMOCIONALES.</span>
+                <span>PREGUNTA POR LOS PAQUETES PROMOCIONALES.</span>
+                <span>PREGUNTA POR LOS PAQUETES PROMOCIONALES.</span>
+                <span>PREGUNTA POR LOS PAQUETES PROMOCIONALES.</span>
+            </div>
+        </div>
+
+        <!-- SECCION BLOG -->
+        <section class="blog">
+            <h2>💭Blog y Artículos</h2>
+            <p class="blog-subtitle">Análisis, divulgación y reflexión con una mirada profesional</p>
+
+            <div class="blog-container">
+                <article class="publicacion">
+                    <a href="./blog.html">
+                        <img src="./imagenes/blog/seductive-mind.jpg" alt="labios mordiéndose">
+                        <h3>La mente también seduce: Psicología del deseo mental</h3>
+                        <p>Explora cómo las fantasías, la imaginación y el cerebro moldean la excitación. Conoce los mitos más frecuentes sobre el deseo, y descubre nuevas formas de conectar con tu erotismo.</p>
+                    </a>
+                </article>
+
+                <article class="publicacion">
+                    <a href="./blog.html">
+                        <img src="./imagenes/blog/assertive.jpg" alt="mujer con megafono asertividad">
+                        <h3>El arte de decir lo que siento sin herir-me</h3>
+                        <p>Conoce los desafíos reales de la comunicación emocional. Cuáles son los errores comunes que todos cometemos y algunas claves sencillas para conversaciones honestas, menos defensivas y más asertivas.</p>
+                    </a>
+                </article>
+
+                <article class="publicacion">
+                    <a href="./blog.html">
+                        <img src="./imagenes/blog/happy-couple.jpg" alt="pareja feliz enamorada">
+                        <h3>Parejas que funcionan: no por magia, sino por hábitos</h3>
+                        <p>Vamos a desmontar ideas románticas y poco realistas sobre la pareja. Hablemos de micro-hábitos que fortalecen el vínculo y conoce ejemplos aplicables a cualquier relación.</p>
+                    </a>
+                </article>
+
+                <article class="publicacion">
+                    <a href="./blog.html">
+                        <img src="./imagenes/blog/slow-down.jpg" alt="tortuga caminando en acera">
+                        <h3>Aprendiendo a bajar el ritmo en un mundo acelerado</h3>
+                        <p>Vivimos acelerados sin darnos cuenta. Nota cómo la ansiedad silenciosa se cuela en la rutina cotidiana y encuentra ideas prácticas para reconectar con tu propio tiempo.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section id="footer">
+            <div class="contenedor-footer">
+                <h2>Buscar ayuda es el primer paso hacia el cambio</h2>
+                <a class="footer-btn" href="./contacto.html">Contáctame</a>
+            </div>
+            <p class="copywrite">&copy; 2025 Carlos Capecchi. Todos los derechos reservados.</p>
+        </section>
+
+        <!-- WHATSAPP BUTTON -->
+        <section id="whatsapp">
+            <a href="https://wa.me/593939283303">
+                <img class="whatsapp-icon" src="./imagenes/iconos/WhatsApp.png">
+            </a>
+        </section>
+
+        <style>        
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: "Hind Siliguri";
+            }
+            /* ENCABEZADO LANDING */
+            .encabezado {
+                position: relative;
+                height: 100vh;
+                overflow: hidden;
+            }
+            .video-fondo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            /* MENÚ */
+            svg {
+                color: #fcfaed;
+                transition: color 0.25s ease;
+            }
+            svg:hover {
+                color: #2d4c53;
+            }
+            .contenedor-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 40px 10px 20px;
+                position: relative;
+                z-index: 10;
+                transition: all .35s ease;
+                backdrop-filter: none;
+            }
+            .menu-fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 96%;
+                height: 12%;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                background: rgba(82, 102, 138, 0.4);
+                backdrop-filter: blur(8px);
+                text-decoration: #5c96a2;
+                padding-bottom: inherit;
+                border-bottom: inherit;
+                transition: all .35s ease;
+            }
+            .lista-menu {
+                display: flex;
+                list-style: none;
+                gap: 30px;
+            }
+            .link-menu {
+                text-decoration: none;
+                font-family: "Hind Vadodara";
+                font-weight: bold;
+                font-size: 20px;
+                color: #fcfaed;
+                transition: color 0.25s ease;
+            }
+            .link-menu:hover {
+                color: #2d4c53;
+            }
+            .btn-hamburguesa {
+                display: none;
+            }
+            /* TITULAR */
+            .titular-texto {
+                margin: 0;
+                padding-top: 150px;
+                padding-left: 60px;
+                opacity: 0;
+                animation: slideRight 1.2s ease-out forwards;
+                animation-delay: 0.2s;
+            }
+            @keyframes slideRight {
+                0% {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            .titular-texto h1 {
+                font-family: "Titan One";
+                font-size: 75px;
+                font-weight: lighter;
+                padding: 0;
+                margin: 0;
+                color: #fcfaed;
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            }
+            .titular-texto h2 {
+                font-family: "Hind Vadodara";
+                font-weight: bold;
+                font-size: 40px;
+                padding: 0;
+                margin-top: 0;
+                margin-bottom: 15px;
+                color: #a1d2cc;
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+            }
+            .titular-texto a {
+                text-decoration: none;
+                font-family: "Hind Siliguri";
+                color: white;
+                background-color: #5c96a2;
+                padding: 9px 15px;
+                border-radius: 15px;
+                display: inline-block;
+                transition: all 0.25s ease;
+            }
+            .titular-texto a:hover {
+                background-color: white;
+                color: #2d4c53;
+                transform: scale(1.07);
+            }
+            /* SECCION FORMULARIO + FRASE */
+            .container {
+                display: flex;
+                justify-content: space-between;
+                gap: 200px;
+                padding: 20px 150px;
+                align-items: center;
+            }
+            .left-container {
+                background-color: #fff;
+                padding: 20px;
+            }
+            .left-container h2 {
+                text-align: center;
+                font-family: "Hind Vadodara";
+                color: #a1d2cc;
+                font-size: 30px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            }
+            #form {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-size: 16px;
+            }
+            input {
+                padding: 12px;
+                border-radius: 12px;
+                border: 1px solid #ccc;
+                width: 450px;
+                font-family: "Hind Siliguri";
+                font-size: 15px;
+            }
+            button {
+                background-color: #5c96a2;
+                color: #fff;
+                border: none;
+                padding: 10px 30px;
+                width: 100px;
+                margin: 30px 180px 20px 180px;
+                border-radius: 15px;
+                font-size: 15px;
+                display: inline-block;
+                transition: all 0.25s ease;
+            }
+            button:hover {
+                background-color: #e5e7dd;
+                color: #2d4c53;
+                transform: scale(1.07);
+            }
+            .right-container h2 {
+                text-align: right;
+                font-family: "Architects Daughter";
+                font-weight: 500;
+                color: #5c96a2;
+                font-size: 30x;
+                line-height: 1.2;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .right-container img {
+                width: 400px;
+                padding-left: 130px;
+            }
+
+            /* SECCION SERVICIOS */
+            .servicios {
+                background-color: #f4f5f2;
+                padding-top: 40px;
+            }
+            .servicios h2 {
+                font-family: "Hind Vadodara";
+                font-size: 40px;
+                color: #a1d2cc;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                margin: 0;
+                padding-left: 50px;
+            }
+            .serv-subtitle {
+                font-size: 20px;
+                margin: 0 0 0 110px;
+            }
+            .serv-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 40px;
+                padding: 40px 40px 70px 40px;
+                max-width: 1300px;
+                margin: auto;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            }
+            .serv-container.aparece {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .single-serv {
+                background-color: #fcfaed;
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                transition: all 0.25s ease;
+            }
+            .single-serv:hover {
+                transform: scale(1.07);
+            }
+            .single-serv img {
+                width: 100%;
+            }
+            .single-serv a {
+                text-decoration: none;
+                color: black;
+            }
+            .single-serv h3 {
+                color: #2d4c53;
+                padding: 0 30px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                font-family: "Hind Vadodara";
+            }
+            .single-serv p {
+                font-size: 15px;
+                padding: 0 30px 10px 30px;
+                margin-top: 0;
+            }
+
+            /* MARQUESINA */
+            .letrero {
+                background-color: #5c96a2;
+                padding: 20px 0;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+            }
+            .scroll-text {
+                display: inline-block;
+                white-space: nowrap;
+                animation: scroll 10s linear infinite;
+            }
+            .scroll-text span {
+                display: inline-block;
+                padding-right: 40px;
+                font-family: "Architects Daughter";
+                font-size: 45px;
+                letter-spacing: 2px;
+                color: #fcfaed;
+                text-shadow: 
+                    0 0 4px #f1faee,
+                    0 0 8px #d7fdfc,
+                    0 0 20px #a8f7ff;
+            }
+            @keyframes scroll {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* SECCION DE BLOG */
+            .blog {
+                padding-top: 50px;
+                padding-bottom: 70px;
+                margin-top: 0;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.9s cubic-bezier(.25,.46,.45,.94);
+            }
+            .blog.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .blog h2 {
+                font-family: "Hind Vadodara";
+                font-size: 40px;
+                color: #a1d2cc;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                margin: 0;
+                padding-left: 50px;
+            }
+            .blog-subtitle {
+                font-size: 20px;
+                margin: 0 0 0 100px;
+            }
+            .publicacion a {
+                text-decoration: none;
+            }
+            .blog-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+                gap: 40px;
+                padding: 0 30px 30px 30px;
+                max-width: 1300px;
+                margin: auto;
+            }
+            .publicacion {
+                background-color: #fcfaed;
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                opacity: 1;
+                transform: translateY(40px);
+                transition: opacity 1.5s ease-out, transform 1.5s ease-out, box-shadow 0.3s ease, transform 0.3s ease;
+                overflow: hidden;
+                will-change: transform;
+            }
+            .publicacion:hover {
+                transform: scale(1.03);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            }
+            .publicacion img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            .publicacion h3 {
+                color: #2d4c53;
+                font-size: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                padding: 10px 30px;
+                margin: 0 0;
+                line-height: 1.2;
+            }
+            .publicacion p {
+                font-size: 15px;
+                margin: 15px 30px 30px 30px;
+                text-align: left;
+                color: black;
+            }
+
+            /* FOOTER */
+            #footer {
+                margin: 0;
+                background-color: #5c96a2;
+                padding: 10px 30px;
+                text-align: center;
+            }
+            .contenedor-footer h2 {
+                font-family: "Hind Siliguri";
+                font-weight: 200;
+                color: #fcfaed;
+                font-size: 20px;
+            }
+            .contenedor-footer a {
+                text-decoration: none;
+                color: white;
+                font-family: "Hind Siliguri";
+                font-size: 16px;
+                padding: 10px 20px;
+                background-color: #a1d2cc;
+                border-radius: 12px;
+                transition: all 0.25s ease;
+                display: inline-block;
+            }
+            .contenedor-footer a:hover {
+                color: #2d4c53;
+                background-color: white;
+                transform: scale(1.05);
+            }
+            #footer p {
+                color: white;
+                font-size: 15px;
+                padding-top: 20px;
+                font-weight: lighter;
+                margin-top: 0;
+            }
+
+            /* BOTÓN DE WHATSAPP */
+            #whatsapp a {
+                background: none;
+                position: fixed;
+                top: 85%;
+                right: 1%;
+            }
+            .whatsapp-icon {
+                height: 50px;
+                width: 50px;
+                z-index: 10;
+            }
+        </style>
+
+        <script>
+        document.addEventListener("scroll", function() {
+            const menu = document.querySelector(".contenedor-menu");
+
+            if (window.scrollY > 20) {
+                menu.classList.add("menu-fixed");
+            } else {
+                menu.classList.remove("menu-fixed");
+            }
+        });
+        </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elemento = document.querySelector(".serv-container");
+
+            const observador = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("aparece");
+                        observador.unobserve(entry.target);
+                    }
+                });
+            });
+
+            observador.observe(elemento);
+        });
+        </script>
+        
+        <script>
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            }
+        });
+        });
+
+        document.querySelectorAll(".blog").forEach((el) => observer.observe(el));
+        </script>
+
+
+    </body>
+</html>
